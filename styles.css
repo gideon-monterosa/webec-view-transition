@@ -90,6 +90,39 @@ article {
     font-size: 0.9rem;
     margin-bottom: 1rem;
   }
+
+  ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+
+  pre {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+  }
+
+  code {
+    background: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: "Courier New", monospace;
+    font-size: 0.9em;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+  }
 }
 
 .back-link {

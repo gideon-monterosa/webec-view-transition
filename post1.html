@@ -4,11 +4,10 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="view-transition" content="same-origin">
-		<title>Understanding CSS View Transitions</title>
+		<title>Problem & Loesung - View Transitions</title>
 		<link href="styles.css" rel="stylesheet">
 	</head>
 	<body>
-
 		<header>
 			<h1>View Transitions Blog</h1>
 			<p>Exploring the magic of CSS View Transitions</p>
@@ -18,29 +17,22 @@
 			<a href="blog.html" class="back-link">← Back to Blog</a>
 
 			<article class="post-1">
-				<h2>Understanding CSS View Transitions</h2>
-				<p class="date">November 16, 2025</p>
+				<h2>Problem & Lösung</h2>
+				<p class="date">November 17, 2025</p>
 
-				<p>CSS View Transitions represent a paradigm shift in how we approach
-					page transitions and animations on the web. Instead of relying on
-					complex JavaScript libraries or manual DOM manipulation, the View
-					Transitions API provides a native, performant way to create smooth
-					transitions between different states of your application.</p>
+				<p>Vorher mussten Entwickler mit harten Reloads leben, komplexe Single-Page Applications mit viel JavaScript bauen, oder auf Workarounds zurückgreifen, um sanfte Übergänge zwischen Seiten zu schaffen.</p>
+				<br>
 
-				<p>The API works by capturing snapshots of the old and new states of your
-					page, then automatically animating between them. This creates a
-					seamless visual experience that feels more like a native application
-					than a traditional web page.</p>
 
-				<p>To enable view transitions, you simply need to add the
-					<code>view-transition</code>
-					meta tag to your HTML and use standard
-					navigation. The browser handles the rest, creating smooth fade
-					transitions by default.</p>
+				<p>Mit Chrome 126 (Mai 2024) wurde Cross-Document Navigation eingeführt. Jetzt reichen nur 2 Zeilen CSS:</p>
 
-				<p>The beauty of this approach is its simplicity. With minimal code, you
-					can create experiences that previously required hundreds of lines of
-					JavaScript and careful state management.</p>
+				<pre><code>@view-transition {
+  navigation: auto;
+}</code></pre>
+<br>
+
+
+				<p>Der Browser rasterisiert automatisch beide States (alte und neue Seite) und erstellt einen nahtlosen Übergang. Alles passiert im Compositor mit 60 FPS, ohne zusätzliches JavaScript.</p>
 			</article>
 		</main>
 
@@ -49,3 +41,4 @@
 		</footer>
 	</body>
 </html>
+

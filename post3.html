@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="view-transition" content="same-origin">
-		<title>View Transitions API Browser Support</title>
+		<title>Browser Support - View Transitions</title>
 		<link href="styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -17,29 +17,17 @@
 			<a href="blog.html" class="back-link">← Back to Blog</a>
 
 			<article class="post-3">
-				<h2>View Transitions API Browser Support</h2>
-				<p class="date">November 14, 2025</p>
+				<h2>Browser Support (Nov 2025)</h2>
+				<p class="date">November 17, 2025</p>
 
-				<p>As with any modern web API, browser support for View Transitions is an
-					important consideration when deciding whether to implement them in your
-					project. The good news is that support is growing rapidly, and the API
-					is designed with progressive enhancement in mind.</p>
+				<p>Die View Transitions API hat unterschiedliche Support-Levels je nach Feature:</p>
 
-				<p>Chrome and Edge have full support for the View Transitions API. Safari
-					and Firefox are actively working on implementations. Even without
-					universal support, the API gracefully degrades - if a browser doesn't
-					support view transitions, users simply won't see the animations, but
-					the site will function normally.</p>
-
-				<p>This progressive enhancement approach means you can start using view
-					transitions today without worrying about breaking your site for users
-					on older browsers. The experience will simply be enhanced for users
-					with modern browsers.</p>
-
-				<p>For critical applications where you need consistent behavior across
-					all browsers, you can detect support using JavaScript and provide
-					alternative animations, though this somewhat defeats the purpose of
-					using the native API.</p>
+				<ul>
+					<li><strong>Cross-Document Navigation:</strong> Chrome 126+, Safari 18.2+</li>
+					<li><strong>Same-Document Transitions:</strong> Chrome 111+, Safari 18+, Firefox 144+</li>
+					<li><strong>View Transition Classes:</strong> Chrome 125+, Safari 18.2+, Firefox 144+</li>
+				</ul>
+				<p>Zero JavaScript nötig, Progressive Enhancement garantiert, dass die Seite überall funktioniert. In Browsern ohne Support gibt es einfach einen normalen Seitenwechsel.</p>
 			</article>
 		</main>
 

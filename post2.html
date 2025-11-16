@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="view-transition" content="same-origin">
-		<title>Advanced View Transition Patterns</title>
+		<title>Named Transitions - View Transitions</title>
 		<link href="styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -17,28 +17,20 @@
 			<a href="blog.html" class="back-link">← Back to Blog</a>
 
 			<article class="post-2">
-				<h2>Advanced View Transition Patterns</h2>
-				<p class="date">November 15, 2025</p>
+				<h2>Named Transitions</h2>
+				<p class="date">November 17, 2025</p>
 
-				<p>Once you understand the basics of CSS View Transitions, you can explore
-					more advanced patterns that create truly stunning user experiences.
-					These patterns leverage the full power of the API to create custom
-					animations that match your application's unique design language.</p>
+				<p>Elemente mit gleichem <code>view-transition-name</code> morphieren automatisch zwischen Seiten:</p>
+				<br>
 
-				<p>One powerful technique is using view transition names to create shared
-					element transitions. By giving elements on different pages the same
-					transition name, you can create morphing animations where an element
-					appears to move and transform between pages.</p>
 
-				<p>Another advanced pattern involves customizing the transition animation
-					itself. While the default cross-fade is elegant, you can use CSS
-					animations to create slides, zooms, or any other transition effect you
-					can imagine.</p>
+				<pre>article-title { view-transition-name: title }
+.detail-title { view-transition-name: title }</pre>
+<br>
 
-				<p>The key to successful view transitions is understanding when to use
-					them. Not every navigation needs a fancy animation - sometimes a simple
-					fade is more appropriate. The goal is to enhance the user experience,
-					not distract from it.</p>
+				<p><strong>Wichtige Limitation:</strong> Jeder <code>view-transition-name</code> muss pro Seite eindeutig sein. Für Listen mit mehreren Elementen braucht man dynamische IDs wie <code>post-123</code>, <code>post-124</code>, etc.</p>
+
+				<p>Custom Animationen sind mit <code>::view-transition-old()</code> und <code>::view-transition-new()</code> moeglich. So kann man Fade, Slide, Scale oder jede andere CSS-Animation definieren.</p>
 			</article>
 		</main>
 
@@ -47,3 +39,4 @@
 		</footer>
 	</body>
 </html>
+
