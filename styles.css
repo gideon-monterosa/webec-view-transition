@@ -35,6 +35,10 @@ footer {
   margin-inline: auto;
 }
 
+main {
+  view-transition-name: main-content;
+}
+
 header {
   text-align: center;
   margin-bottom: 3rem;
@@ -66,8 +70,6 @@ article {
   transition:
     transform 0.2s,
     box-shadow 0.2s;
-
-  view-transition-class: post;
 
   &:hover {
     box-shadow: var(--shadow-md);
@@ -120,12 +122,12 @@ footer {
   navigation: auto;
 }
 
-::view-transition-old(.post) {
-  animation: fade 3s linear forwards;
+::view-transition-old(main-content) {
+  animation: fade 1s ease-out forwards;
 }
 
-::view-transition-new(.post) {
-  animation: fade 3s linear reverse;
+::view-transition-new(main-content) {
+  animation: fade 1s ease-in reverse;
 }
 
 @keyframes fade {
