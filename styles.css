@@ -14,10 +14,6 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-@view-transition {
-  navigation: auto;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +41,8 @@ header {
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--color-border);
 
+  view-transition-name: header;
+
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -68,6 +66,8 @@ article {
   transition:
     transform 0.2s,
     box-shadow 0.2s;
+
+  view-transition-class: post;
 
   &:hover {
     box-shadow: var(--shadow-md);
@@ -112,4 +112,27 @@ footer {
   padding-top: 2rem;
   border-top: 1px solid var(--color-border);
   color: var(--color-text-lighter);
+
+  view-transition-name: footer;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(.post) {
+  animation: fade 3s linear forwards;
+}
+
+::view-transition-new(.post) {
+  animation: fade 3s linear reverse;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
