@@ -1,0 +1,115 @@
+:root {
+  --color-text: #333;
+  --color-text-dark: #1a1a1a;
+  --color-text-light: #666;
+  --color-text-lighter: #888;
+  --color-accent: #0066cc;
+  --color-bg: #fafafa;
+  --color-border: #e0e0e0;
+  --color-white: white;
+
+  --max-width: 800px;
+  --border-radius: 8px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  padding: 2rem 1rem;
+}
+
+header,
+main,
+footer {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-dark);
+  }
+
+  p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+  }
+}
+
+article {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  h2 a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+  }
+
+  h2 a:hover {
+    color: var(--color-accent);
+  }
+
+  .date {
+    color: var(--color-text-lighter);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-lighter);
+}

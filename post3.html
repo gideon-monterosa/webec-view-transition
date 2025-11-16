@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="view-transition" content="same-origin">
+		<title>View Transitions API Browser Support</title>
+		<link href="styles.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<main>
+			<a href="blog.html" class="back-link">ê Back to Blog</a>
+
+			<article>
+				<h2>View Transitions API Browser Support</h2>
+				<p class="date">November 14, 2025</p>
+
+				<p>As with any modern web API, browser support for View Transitions is an
+					important consideration when deciding whether to implement them in your
+					project. The good news is that support is growing rapidly, and the API
+					is designed with progressive enhancement in mind.</p>
+
+				<p>Chrome and Edge have full support for the View Transitions API. Safari
+					and Firefox are actively working on implementations. Even without
+					universal support, the API gracefully degrades - if a browser doesn't
+					support view transitions, users simply won't see the animations, but
+					the site will function normally.</p>
+
+				<p>This progressive enhancement approach means you can start using view
+					transitions today without worrying about breaking your site for users
+					on older browsers. The experience will simply be enhanced for users
+					with modern browsers.</p>
+
+				<p>For critical applications where you need consistent behavior across
+					all browsers, you can detect support using JavaScript and provide
+					alternative animations, though this somewhat defeats the purpose of
+					using the native API.</p>
+			</article>
+		</main>
+
+		<footer>
+			<p>CSS View Transitions Demo</p>
+		</footer>
+	</body>
+</html>
