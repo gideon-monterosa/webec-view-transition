@@ -35,10 +35,6 @@ footer {
   margin-inline: auto;
 }
 
-main {
-  view-transition-name: main-content;
-}
-
 header {
   text-align: center;
   margin-bottom: 3rem;
@@ -122,19 +118,50 @@ footer {
   navigation: auto;
 }
 
-::view-transition-old(main-content) {
-  animation: fade 1s ease-out forwards;
+.post-1 {
+  view-transition-name: post-1;
+}
+.post-2 {
+  view-transition-name: post-2;
+}
+.post-3 {
+  view-transition-name: post-3;
 }
 
-::view-transition-new(main-content) {
-  animation: fade 1s ease-in reverse;
-}
+/* --------------------- */
+/* - CUSTOM ANIMATIONS - */
+/* --------------------- */
 
-@keyframes fade {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
+/* ::view-transition-old(post-1), */
+/* ::view-transition-old(post-2), */
+/* ::view-transition-old(post-3) { */
+/*   animation: scale-down 0.4s ease-in; */
+/* } */
+/**/
+/* ::view-transition-new(post-1), */
+/* ::view-transition-new(post-2), */
+/* ::view-transition-new(post-3) { */
+/*   animation: scale-up 0.4s ease-in; */
+/* } */
+/**/
+/* @keyframes scale-up { */
+/*   from { */
+/*     transform: scale(0); */
+/*     opacity: 0; */
+/*   } */
+/*   to { */
+/*     transform: scale(1); */
+/*     opacity: 1; */
+/*   } */
+/* } */
+/**/
+/* @keyframes scale-down { */
+/*   from { */
+/*     transform: scale(1); */
+/*     opacity: 1; */
+/*   } */
+/*   to { */
+/*     transform: scale(0); */
+/*     opacity: 0; */
+/*   } */
+/* } */
