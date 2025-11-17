@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="view-transition" content="same-origin">
-		<title>Problem & Loesung - View Transitions</title>
+		<title>Problem & Lösung - View Transitions</title>
 		<link href="styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -23,14 +23,12 @@
 				<p>Vorher mussten Entwickler mit harten Reloads leben, komplexe Single-Page Applications mit viel JavaScript bauen, oder auf Workarounds zurückgreifen, um sanfte Übergänge zwischen Seiten zu schaffen.</p>
 				<br>
 
-
 				<p>Mit Chrome 126 (Mai 2024) wurde Cross-Document Navigation eingeführt. Jetzt reichen nur 2 Zeilen CSS:</p>
 
 				<pre><code>@view-transition {
   navigation: auto;
 }</code></pre>
-<br>
-
+				<br>
 
 				<p>Der Browser rasterisiert automatisch beide States (alte und neue Seite) und erstellt einen nahtlosen Übergang. Alles passiert im Compositor mit 60 FPS, ohne zusätzliches JavaScript.</p>
 			</article>
@@ -41,4 +39,3 @@
 		</footer>
 	</body>
 </html>
-
